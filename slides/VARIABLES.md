@@ -13,7 +13,7 @@ def hello_word(request):
     Renders your name in a template
     '''
     name = request.GET.get('name', 'party people')
-    render(request, 'timetracker/hello_world.html', {'name': name})
+    return render(request, 'timetracker/hello_world.html', {'name': name})
 
 ## entries/views.py
 
