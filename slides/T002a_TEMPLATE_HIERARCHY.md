@@ -9,8 +9,9 @@
         └── templates
             ├── base.html
             └── album
-                ├── album_list.html
-                └── album_details.html
+                ├── album_details.html
+                ├── album_list.html  
+                └── hello_world.html
    
 ```
 
