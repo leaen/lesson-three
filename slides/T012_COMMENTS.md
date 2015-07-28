@@ -4,7 +4,7 @@
 * The comment tag has an opening and closing tag:
     * `{% comment %}` 
     * `{% endcomment %}`
-* An optional note may be inserted in the first tag
+* An optional note may be inserted in the opening tag
 
 
 For example:
