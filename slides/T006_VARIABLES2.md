@@ -13,9 +13,6 @@ class Album(models.Model):
     length = models.CharField(max_length=10, blank=True)
 
     def __unicode__(self):
-        '''
-        The objects title is the record's name
-        '''
         return self.name
 
 
