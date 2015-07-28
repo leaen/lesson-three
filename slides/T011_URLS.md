@@ -1,25 +1,45 @@
 ## The URL Tag
 
-* It is possible to pass a list of objects as a variable into your template.
-* You could loop through that list using a `template tags`. 
-    * Template tags are surrounded by `{%` and `%}`
-    * Template tags have both open and close tags
+* The URL tag returns an absolute path reference (a URL without the domain name) matching a given view function and optional parameters
+* With url tags you could change the path of the url and as long as you keep the url name you will access the same view
+* URL tags have this format `{% url <url-name> <arguments> %}`
+
 
 For example:
 ```
+from django.conf.urls import include, url
+from django.contrib import admin
+from album.views import hello_world, album_list, album_details
+
+urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', hello_world, name='hello-world' ),
+    url(r'^albums', album_list, name='album-list'),
+    url(r'^album/(?P<pk>\d+)/$', album_details, name='album-details')
+]
+
+## music/urls.py
+
 <html>
     <head>
         <title>Albums</title>
     </head>
     <body>
-        {% for album in albums %}    
+    {% if albums %}
+        {% for album in albums %}  
         <tr>
-            <td> <a href="album/{{album.id}}"> {{ album.name }} </a> </td>
+            <td> <a href="{% url album-details album.id %}"> {{ album.name }} </a> 
+            </td>
+            <td> {{ album.tracks }} </td>
+            <td> {{ album.length }} </td>
         </tr>
-        {% endfor %}        
+        {% endfor %}
+    {% else %}
+        <p> Add your favorite albums </p>
+    {% endif %}                        
     </body>
 <html>
 
-## 'album/album_list.html'    
+## album/album_list.html    
 ```
 

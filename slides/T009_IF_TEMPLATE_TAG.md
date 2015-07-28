@@ -13,7 +13,9 @@
     {% if albums %}
         {% for album in albums %}  
         <tr>
-            <td> {{ album.name }} </td>
+            <td> <a href="album/{{album.id}}"> {{ album.name }} </a> </td>
+            <td> {{ album.tracks }} </td>
+            <td> {{ album.length }} </td>
         </tr>
         {% endfor %}
     {% else %}
