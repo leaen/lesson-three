@@ -7,9 +7,9 @@
 
 {% block content %}
     {% if albums %}
-        {% for album in albums %}  
+        {% for album in albums %}
         <tr>
-            <td> <a href="{% url album-details album.id %}"> {{ album.name }} </a> 
+            <td> <a href="{% url 'album_details' album.id %}"> {{ album.name }} </a>
             </td>
             {% comment "No need for this info since we have a details page" %}
             <td> {{ album.tracks }} </td>

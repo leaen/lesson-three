@@ -20,7 +20,7 @@ For example:
         <tr>
             <td> <a href="{% url album-details album.id %}"> {{ album.name }} </a> 
             </td>
-            {% comment "No need for this info since we have a details page" %}
+            {% comment "Don't need for this info since we have a details page" %}
             <td> {{ album.tracks }} </td>
             <td> {{ album.length }} </td>
             {% endcomment %}

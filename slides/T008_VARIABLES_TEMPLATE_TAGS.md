@@ -3,7 +3,7 @@
 * It is possible to pass a list of objects as a variable into your template.
 * You could loop through that list using a `template tags`. 
     * Template tags are surrounded by `{%` and `%}`
-    * Template tags have both open and close tags
+    * Template tags have both opening and closing tags
 
 For example:
 ```
@@ -26,7 +26,7 @@ def album_list(request):
         {% for album in albums %}    
         <tr>
             <td> <a href="album/{{album.id}}"> {{ album.name }} </a> </td>
-            td> {{ album.tracks }} </td>
+            <td> {{ album.tracks }} </td>
             <td> {{ album.length }} </td>
         </tr>
         {% endfor %}        

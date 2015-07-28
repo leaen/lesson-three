@@ -14,8 +14,8 @@ from album.views import hello_world, album_list, album_details
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', hello_world, name='hello-world' ),
-    url(r'^albums', album_list, name='album-list'),
-    url(r'^album/(?P<pk>\d+)/$', album_details, name='album-details')
+    url(r'^albums', album_list, name='album_list'),
+    url(r'^album/(?P<pk>\d+)/$', album_details, name='album_details')
 ]
 
 ## music/urls.py

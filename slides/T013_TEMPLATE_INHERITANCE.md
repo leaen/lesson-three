@@ -4,6 +4,6 @@
 * You create template blocks with the `{% block <block-name >%}` tag
     *  Each block tag has a block-name allowing you to differentiate between the block tags
     * Block tags have opening and closing tags `{% endblock <block-name> %}`
-* You call your base template with the extends tag `{% extends <template-to-extend >%}`
+* You call your base (skeleton) template with the extends tag `{% extends <template-to-extend >%}`
 
 

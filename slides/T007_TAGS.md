@@ -5,5 +5,5 @@
 * Meaning it could do the following:
     * Serve as a control structure for your template
     * Grab content from a database
-    * A tag can output content
+    * Output content
     * Enable access to other template

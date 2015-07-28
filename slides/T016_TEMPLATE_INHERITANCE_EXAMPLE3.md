@@ -5,7 +5,7 @@
 ```
 {% extends "base.html" %}
 
-{% block title %} {{ album.name }} {% block title %}
+{% block title %} {{ album.name }} {% endblock title %}
 
 {% block content %}
     <tr>
@@ -19,6 +19,7 @@
     </tr>
 {% endblock content %}
 
-## album/album_list.html   
+
+## album/album_details.html   
 ```
 

@@ -22,13 +22,17 @@ class Album(models.Model):
 ## album/models.py
 
 from django.shortcuts import render
+
 from .models import Album
 
 def album_details(request, pk):
     '''
     Returns the album page
     '''
-    album = Album.objects.get(pk=pk)
+    try:
+        album = Album.objects.get(pk=pk)
+    except:
+        album = None        
     return render(request, 'album/album_details.html', {'album': album}))
 
 ## album/views.py

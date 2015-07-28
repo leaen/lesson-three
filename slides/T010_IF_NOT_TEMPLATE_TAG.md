@@ -1,6 +1,6 @@
 ## The If Template Tag
 
-* We could also use `if not` for additional control of our template
+* Also lets not forget the `if not` tag for additional control of our template
 
 * For example:
 
