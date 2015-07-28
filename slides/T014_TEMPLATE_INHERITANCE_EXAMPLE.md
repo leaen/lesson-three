@@ -1,6 +1,7 @@
 ## Template Inheritance Example
 
-* In the templates that we've created, we could optimize our templates by creating a base template with a title blocks and content blocks: 
+* We could optimize our templates by creating a base template from which the other template could inherit
+* The base template will have a title and content block 
 
 ```
 <html>
