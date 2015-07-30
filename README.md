@@ -37,8 +37,6 @@ Install reveal-md with npm and use that to display the class slides.
 From within the `lesson-three` repo:
 
 ```
-    npm install -g reveal-md
-
     cd slides
     reveal-md CLASS.md --theme melbdjango
 ```
