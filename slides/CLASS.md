@@ -23,8 +23,8 @@ Common Code / cc&20!4@
 
 ### Function Based Views
 
-- Today we're focussed on function based views (FBVs)
-- The simpler of the two types of views we'll cover
+- Today we're focused on function based views (FBVs)
+- FBVs are the simpler of the two types of views
 - All FBVs accept a `HttpRequest` object as the first argument
 
 ---
@@ -112,7 +112,7 @@ urlpatterns = [
 ### Capturing dynamic parts of the URL
 
 - Django lets you capture parts of the URL to be passed to your views
-  - Simple put parenthesis around the part you want
+  - Simply put parenthesis around the part you want
 
 ```
 urlpatterns = [
@@ -429,7 +429,7 @@ def hello_world(request):
 
 ### Template Tags
 
-- Thats where Django's template tags come in!
+- That's where Django's template tags come in!
 - Tags allow us to add logic to our templates
 - Tags are surrounded by `{%` and `%}`
 
