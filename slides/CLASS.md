@@ -122,8 +122,6 @@ urlpatterns = [
 ]
 ```
 
-- Which would call the 'albums' function
-
 ---
 
 ### Capturing dynamic parts of the URL
@@ -577,6 +575,7 @@ def albums(request):
 - Then we could have an `albums.html` template like this:
 
 ```
+{% extends 'base.html' %}
 {% block title %}Albums{% endblock %}
 
 {% block content %}
