@@ -19,6 +19,6 @@ from django.contrib import admin
 import albums.views
 
 urlpatterns = [
-    url(r'^$', albums.views.albums),
+    url(r'^$', albums.views.albums, name="albums"),
     url(r'^admin/', include(admin.site.urls)),
 ]

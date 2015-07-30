@@ -1,6 +1,6 @@
 ### MelbDjango School - Lesson Three
 
-Django URLs, Views & Templates
+Django Views, URLs & Templates
 
 ---
 
@@ -10,12 +10,153 @@ Common Code / cc&20!4@
 
 ---
 
+### Django Views
 
+- Django views are where our application logic lives
+- They process a HTTP Request and return a HTTP Response
+- By convention we place our views in `views.py`
+- Django provides two core types of views:
+  - Function based views
+  - Class based views
 
+---
 
+### Function Based Views
 
+- Today we're focussed on function based views (FBVs)
+- The simpler of the two types of views we'll cover
+- All FBVs accept a `HttpRequest` object as the first argument
 
+---
 
+### A Simple Django View
+
+- Here's an example from our Lesson One homework:
+
+```
+from django.http import HttpResponse
+
+def hello_world(request):
+    name = request.GET.get('name')
+    if name:
+        return HttpResponse('Hello %s' % name)
+    else:
+        return HttpResponse('<form><input name="name"></form>')
+```
+
+---
+
+### The Django logic layer
+
+- We use views to control the logic of our application
+  - Deciding what to return to the user
+  - Validating input
+  - Getting and updating models from our database
+  - Anything else you can think of...
+
+---
+
+### Django URLs
+
+- Django projects include a `URLconf` that define a list of URLs it knows about
+- Django searches through this list and returns the first one that matches the request's URI
+- By default, our URLs live in `<project-name>/urls.py`
+- We can include other URLs files for our Django applications
+
+---
+
+### Django's default URLs
+
+- Simplified in Django 1.8
+- Django enables /admin/ by default by including its URLConf
+
+```
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
+]
+```
+
+Check out the top of your `urls.py` - it's a cheat sheet to using URLs
+
+---
+
+### Adding a new URL
+
+- We can add a URL that points to a view
+
+- URLs that point to a view include three parts:
+  - the URL pattern
+  - the view
+  - the URL's name
+
+- URL patterns are regular expressions
+  - Check out the resources if you're not familiar
+
+```
+from django.conf.urls import include, url
+from django.contrib import admin
+
+import albums.views
+
+urlpatterns = [
+    url(r'^albums/$', albums.views.albums, name="albums"),
+    url(r'^admin/', include(admin.site.urls)),
+]
+```
+
+---
+
+### Capturing dynamic parts of the URL
+
+- Django lets you capture parts of the URL to be passed to your views
+  - Simple put parenthesis around the part you want
+
+```
+urlpatterns = [
+    url(r'^albums/$', albums.views.album_list, name="album_list"),
+    url(r'^albums/([0-9]+)/$', albums.views.album_detail, name="album_detail"),
+    url(r'^admin/', include(admin.site.urls)),
+]
+```
+
+- Which would call the 'albums' function
+
+---
+
+### Capturing dynamic parts of the URL
+
+- You can optionally _name_ the captured parts
+  - Use the `(?P<name>pattern)` syntax
+
+- The captured parts will be passed to your view as keyword arguments
+
+```
+urlpatterns = [
+    url(r'^albums/$', albums.views.album_list, name="album_list"),
+    url(r'^albums/(?P<album_id>[0-9]+)/$', albums.views.album_detail, name="album_detail"),
+    url(r'^admin/', include(admin.site.urls)),
+]
+```
+
+---
+
+### Including other urls.py files
+
+- It's best practice to create `urls.py` files for each of your applciations
+- You need to include those in the root URLconf of your project
+- Make sure you remove the `$` from the pattern when using include
+
+```
+urlpatterns = [
+    url(r'^albums/', include(albums.urls)),
+    url(r'^admin/', include(admin.site.urls)),
+]
+```
+
+---
 
 ### What is a Django template?
 
@@ -465,7 +606,7 @@ def albums(request):
 
 ---
 
-# Using URLs in templates
+### Using URLs in templates
 
 - In urls.py:
 
