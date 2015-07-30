@@ -1,6 +1,8 @@
-# MelbDjango School Lesson One
+# MelbDjango School Lesson Three
 
 **Important:** Please take the [survey](https://docs.google.com/a/acommoncreative.com/forms/d/1VKqD1-aVsgztk19kdluNtFyTGiarbV9LgBFi2BwYT-g/viewform?c=0&w=1) if you came to the class today.
+
+The slides for this lesson are [available online](https://melbdjango.github.io/lesson-three/).
 
 Congratulations, you've made it to the git repository for our third lesson. Hopefully you also made it to the class
 and some of this makes sense to you.
