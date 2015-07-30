@@ -16,3 +16,6 @@
 
 [Hitchhickers Guide to Python: Code Style]
 (http://docs.python-guide.org/en/latest/writing/style/)
+
+[Simple Horizonal Navigation with CSS]
+(http://css-snippets.com/simple-horizontal-navigation/)

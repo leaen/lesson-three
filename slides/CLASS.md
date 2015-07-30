@@ -148,8 +148,10 @@ urlpatterns = [
 - Make sure you remove the `$` from the pattern when using include
 
 ```
+from albums import urls as album_urls
+
 urlpatterns = [
-    url(r'^albums/', include(albums.urls)),
+    url(r'^albums/', include(album_urls)),
     url(r'^admin/', include(admin.site.urls)),
 ]
 ```
@@ -222,15 +224,15 @@ Nice one!
 ```
 ├── manage.py
 ├── albums
-│   ├── admin.py
-│   ├── __init__.py
-│   ├── migrations
-│   │   └── __init__.py
-│   ├── models.py
-│   ├── templates
-│   │   └── template.html
-│   ├── tests.py
-│   └── views.py
+│   ├── admin.py
+│   ├── __init__.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── templates
+│   │   └── template.html
+│   ├── tests.py
+│   └── views.py
 └── music
     ├── __init__.py
     ├── settings.py
