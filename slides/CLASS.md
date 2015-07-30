@@ -148,8 +148,10 @@ urlpatterns = [
 - Make sure you remove the `$` from the pattern when using include
 
 ```
+from albums import urls as album_urls
+
 urlpatterns = [
-    url(r'^albums/', include(albums.urls)),
+    url(r'^albums/', include(album_urls)),
     url(r'^admin/', include(admin.site.urls)),
 ]
 ```
