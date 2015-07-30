@@ -1,5 +1,4 @@
 """timetracker URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
 Examples:
@@ -15,19 +14,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.http import HttpResponse
 
-
-def hello_world(request):
-    name = request.GET.get('name')
-    if name:
-        return HttpResponse('Hello %s' % name)
-    else:
-        return HttpResponse('<form><input name="name"></form>')
-
+from entries import urls as entry_urls
 
 
 urlpatterns = [
-    url(r'^$', hello_world),
+    url(r'^', include(entry_urls)),
     url(r'^admin/', include(admin.site.urls)),
 ]
