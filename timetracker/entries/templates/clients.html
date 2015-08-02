@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul class="nav">
+        <li><a href="/entries/">Entries</a></li>
+        <li><a href="/clients/" class="active">Clients</a></li>
+        <li><a href="/projects/">Projects</a></li>
+    </ul>
+
+    <h2>Clients</h2>
+    <ul>
+        {% for client in client_list %}
+            <li>{{ client.name }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
