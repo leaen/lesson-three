@@ -17,8 +17,9 @@ class Project(models.Model):
     def __str__(self):
         return '<{}> {}'.format(self.client, self.name)
 
+    def get_entries(self):
+        return Entry.objects.filter(project=self)
 
-# Create your models here.
 class Entry(models.Model):
     start = models.DateTimeField(default=timezone.now)
     stop = models.DateTimeField(blank=True, null=True)

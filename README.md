@@ -20,7 +20,7 @@ Check our RESOURCES.md for some links we think you'll find handy.
 - [X] Update the templates to use `{% url %}`
 - [X] Create views that list `Clients` and `Projects`
 - [X] Use template inheritance to avoid having the same code in all of your templates
-- [ ] Bonus points: Create a client summary page that lists all of it's projects and time entries
+- [X] Bonus points: Create a client summary page that lists all of it's projects and time entries
 
 When you've completed some or all of the homework please make a [Pull Request][gh-pr] against this repository. If you submit
 your work before Wednesday evening we'll give you feedback before the next class.

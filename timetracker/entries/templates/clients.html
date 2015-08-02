@@ -10,7 +10,7 @@
     <h2>Clients</h2>
     <ul>
         {% for client in client_list %}
-            <li>{{ client.name }}</li>
+            <li><a href="/client?client_id={{ client.id }}">{{ client.name }}</a></li>
         {% endfor %}
     </ul>
 
