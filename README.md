@@ -12,14 +12,14 @@ Check our RESOURCES.md for some links we think you'll find handy.
 
 ## Homework Checklist
 
-- [ ] Read up on regular expressions
-- [ ] [Fork this repository][gh-fork]
-- [ ] Clone the repo to your own machine
-- [ ] Use the virtualenv you created in previous lesson
-- [ ] Add urls for clients and projects
-- [ ] Update the templates to use `{% url %}`
-- [ ] Create views that list `Clients` and `Projects`
-- [ ] Use template inheritance to avoid having the same code in all of your templates
+- [X] Read up on regular expressions
+- [X] [Fork this repository][gh-fork]
+- [X] Clone the repo to your own machine
+- [X] Use the virtualenv you created in previous lesson
+- [X] Add urls for clients and projects
+- [X] Update the templates to use `{% url %}`
+- [X] Create views that list `Clients` and `Projects`
+- [X] Use template inheritance to avoid having the same code in all of your templates
 - [ ] Bonus points: Create a client summary page that lists all of it's projects and time entries
 
 When you've completed some or all of the homework please make a [Pull Request][gh-pr] against this repository. If you submit
