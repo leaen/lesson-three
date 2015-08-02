@@ -7,5 +7,5 @@ urlpatterns = [
     url(r'^entries/$', views.entries, name='entries'),
     url(r'^clients/$', views.clients, name='clients'),
     url(r'^projects/$', views.projects, name='projects'),
-    url(r'client', views.client, name='client'),
+    url(r'^client', views.client, name='client'),
 ]
