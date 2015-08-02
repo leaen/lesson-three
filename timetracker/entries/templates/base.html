@@ -52,18 +52,8 @@
   </head>
   <body>
     <div class="container">
-      <ul class="nav">
-        <li><a href="/entries/" class="active">Entries</a></li>
-        <li><a href="/clients/">Clients</a></li>
-        <li><a href="/projects/">Projects</a></li>
-      </ul>
-
-      <h2>Entries</h2>
-      <ul>
-        {% for entry in entry_list %}
-        <li>{{ entry.description }}</li>
-        {% endfor %}
-      </ul>
+      {% block content %}
+      {% endblock %}
     </div>
   </body>
 </html>
