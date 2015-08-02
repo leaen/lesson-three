@@ -5,4 +5,6 @@ from entries import views
 
 urlpatterns = [
     url(r'^entries/$', views.entries, name='entries'),
+    url(r'^clients/$', views.clients, name='clients'),
+    url(r'^projects/$', views.projects, name='projects'),
 ]
